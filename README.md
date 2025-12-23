@@ -37,7 +37,18 @@ pip install -r requirements.txt
 
 ### 自动游戏脚本
 
-运行完整的自动游戏流程：
+#### 首次运行（推荐使用调试模式）
+
+```bash
+python wows_auto_bot.py --debug
+```
+
+调试模式会：
+- 保存关键步骤的截图到 `debug_output/` 目录
+- 输出详细的检测信息
+- 帮助你确认程序是否正常工作
+
+#### 正常运行
 
 ```bash
 python wows_auto_bot.py
@@ -49,6 +60,19 @@ python wows_auto_bot.py
 3. 在战斗中自动寻敌、瞄准、射击
 4. 检测到被击毁后自动退出
 5. 返回港口后自动开始下一局
+
+#### 测试按钮检测
+
+如果程序无法正确点击按钮，可以运行测试脚本：
+
+```bash
+python test_button_detection.py
+```
+
+这会帮助你：
+- 检测橙色按钮是否能被正确识别
+- 查看检测到的按钮位置是否正确
+- 生成调试图片用于分析
 
 ### 自动导航脚本
 
